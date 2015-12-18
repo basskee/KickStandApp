@@ -1,0 +1,22 @@
+<div class="ridecol-top">
+	<h2 class="map-title">{{rides[1].name}}</h2>
+	<div class="map-info">
+		<span><i class="fa fa-map-marker"></i>{{rides[1].miles}}mi /  </span>
+		<span><i class="fa fa-clock-o"></i>{{rides[1].time}}min  /  </span>
+		<span><i class="fa fa-flag-o"></i>{{rides[1].stops}}stops</span>
+	</div>
+	<div id="map"></div>
+	<p class="ride-descrip">Bike along the river between two great Detroit brewers</p>
+	<div class="ride-specifics" ng-repeat="stop in rides[1].waypoints">
+		<p class="ride-info-name">
+			<img src="{{stop.flag}}" class="ride-info-flag"/>
+			{{stop.name}}
+			<img src="img/memicon32.png" class="memicon" ng-show="{{stop.offer}}"/>
+		</p>
+		<p class="ride-info">{{stop.hours}}</p>
+		<p class="ride-info">{{stop.what}}</p>
+	</div>
+
+</div>
+
+<a href="/rideinfo">More Rides</a>
